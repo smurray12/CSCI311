@@ -1,0 +1,5 @@
+ErrorDocument 404 /~murraysa/csci311/error404.html
+AuthUserFile "/home/student/murraysa/passwords/.htpasswd"
+AuthName "Please Enter Password"
+AuthType Basic
+Require valid-user

@@ -1,0 +1,20 @@
+/*
+* @Author: Sarah Murray
+* @Csci id: murraysa
+* @Purpose: css file - lab1
+* @Date:   2020-01-17 17:38:10
+* @Last Modified by:   Sarah
+* @Last Modified time: 2020-01-17 22:55:05
+*/
+
+ul {
+  list-style-image: url('maple-leaf.png');
+}
+
+a:hover {
+  color: red;
+}
+
+h1, h2, footer {
+	text-align: center;
+}
