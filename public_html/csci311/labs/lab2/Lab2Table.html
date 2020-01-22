@@ -1,0 +1,119 @@
+<!-- 
+* @Author: Sarah Murray
+* @Csci id: murraysa
+* @Purpose: Lab2 csci311
+* @Date:   2020-01-15 21:15:44
+* @Last Modified by:   Sarah
+* @Last Modified time: 2020-01-17 14:54:42
+-->  
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+  	<link rel="stylesheet" type="text/css" href="Lab2Styles.css">   
+  	<title>Lab 2</title>
+</head>
+
+<body>
+	<header>
+		<h1> Lab 2: Tables!</h1>
+		<h2> General Styling</h2>
+	</header>
+	
+	<p> All headings are centered, with dark red background, and white text </p>
+	<p> All divs have a 1 pixel dashed blue border. Other styles are applied. Try to figure them out! </p>
+
+	<h3>A Table made with table elements</h3>
+	<p>The table contains a head row, using the &ltthread&gt element, and one &lttr&gt, in which there are three &ltth&gt elements </p>
+	<p>Each subsequent row contains three <td> elements</p>
+   
+   <table>
+   	<tr>
+   		<th>Name</th>
+   		<th>Colour</th>
+   		<th>Type</th>
+   	</tr>
+   	<tr>
+   		<td>Pikachu</td>
+   		<td>Yellow</td>
+   		<td>Electric</td>
+   	</tr>
+   	<tr>
+   		<td>Bulbasaur</td>
+   		<td>Green</td>
+   		<td>Grass</td>
+   	</tr>
+   	<tr>
+   		<td>Charmander</td>
+   		<td>Orange</td>
+   		<td>Fire</td>
+   	</tr>
+   </table>
+
+   <h4>A Table made with div and span elements, only</h4>
+   <p>
+		This table consists of a main div, with a div for each row, and then a span for each column. The first "row" and "columns" have special classes to style them differently for the header row
+	</p>
+
+	<p>
+		Classes are used for each element to style the cells to behave like a table. Google "display: table" and "display: table-row" etc. for how to achieve this
+	</p>
+
+	<div class="table">
+		<div class="heading">
+			<div class="cell">
+				<p>Name</p>
+			</div>
+			<div class="cell">
+				<p>Colour</p>
+			</div>
+			<div class="cell">
+				<p>Type</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="cell">
+				<p>Pikachu</p>
+			</div>
+			<div class="cell">
+				<p>Yellow</p>
+			</div>
+			<div class="cell">
+				<p>Electric</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="cell">
+				<p>Bulbasaur</p>
+			</div>
+			<div class="cell">
+				<p>Green</p>
+			</div>
+			<div class="cell">
+				<p>Grass</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="cell">
+				<p>Charmander</p>
+			</div>
+			<div class="cell">
+				<p>Orange</p>
+			</div>
+			<div class="cell">
+				<p>Fire</p>
+			</div>
+		</div>
+	</div>
+
+
+
+   
+   <footer>
+       <small>Copyright &#169; 2020 Sarah Murray</small>
+   </footer>
+
+</body>
+</html>

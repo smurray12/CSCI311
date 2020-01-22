@@ -1,0 +1,60 @@
+<!-- 
+* @Author: Sarah Murray
+* @Csci id: murraysa
+* @Purpose: Lab2 csci311
+* @Date:   2020-01-20 08:15:24
+* @Last Modified by:   Sarah
+* @Last Modified time: 2020-01-20 13:05:32
+-->  
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+  	 <link rel="stylesheet" type="text/css" href="Lab2Styles.css">
+    <title>Lab 2</title>
+
+</head>
+
+<body>
+	<header>
+        <h1>Lab 2: Form</h1>
+   </header>
+   	
+   <form action="Lab2ProcessForm.php" method="post">
+		
+		<div class="inputRow">
+			<label class="myLabel" for="numberA"> Number A: </label>
+			<input class="myInput" type="number" name="numberA" id="numberA" min=50 max=400 tabindex="2">
+		</div>
+		
+		<div class="inputRow">
+			<label class="myLabel" for="numberB"> Number B: </label>
+			<input class="myInput" type="number" name="numberB" id="numberB" min=1 max=350 tabindex="3">
+		</div>
+		
+		<div class="inputRow">
+			<label class="myLabel" for="name"> Your Name: </label>
+			<input class="myInput" type="text" name="aName" id="aName" tabindex=1>
+		</div>	
+		
+		<div class="inputRow">
+			<label class="myLabel" for="colour"> A Colour </label>		
+			<input class="myInput" type="color" name="colour" id="colour" tabindex="4">
+		</div>
+		
+		<div class="inputRow">
+			<input type="submit" value="Create">
+		</div>
+		
+		
+   </form>
+  
+
+    <footer>
+        <small>Copyright &#169; 2020 Sarah Murray</small>
+    </footer>
+
+</body>
+</html>
