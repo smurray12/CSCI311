@@ -48,10 +48,60 @@ input[type=submit] {
 	padding-right: 10px;
 }
 
-h1 {
+.one, .two, .three {
+	border-style: dashed;
+	border-color: blue;
+	border-width: 1px;
+	margin: 5px;
+}
+
+.img {
+	width: 400px;
+}
+
+.img1 {
+	width: 500px;
+}
+
+#main_body {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+table, .table {
+	border-collapse: collapse;
+	table-layout: fixed;
+	margin: 10px;
+	width: 50%;
+}
+
+th, td, .heading, .cell {
+	height: 50px; 
+}
+
+thead, .heading {
+	background-color: grey;
+	color: white;
+}
+
+td, .cell {
+	vertical-align: bottom;
+	padding-left: 10px;
+}
+
+table, th, td, .table, .heading, .cell {
+	border: 1px solid black;
+}
+
+h1, h2, h3, h4 {
 	background-color: darkred;
 	text-align: center;
 	color: white;
+}
+
+nav {
+	text-align: center;
+	margin-bottom: 10px;
 }
 
 footer {
