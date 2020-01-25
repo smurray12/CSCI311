@@ -4,7 +4,7 @@
 * @Purpose: Lab2Media.html csci311
 * @Date:   2020-01-20 8:20:44
 * @Last Modified by:   Sarah
-* @Last Modified time: 2020-01-16 14:54:42
+* @Last Modified time: 2020-01-25 14:10:53
 -->
 
 <!DOCTYPE html>
@@ -26,14 +26,41 @@
         </nav>
 	</header>
 	
-	<img class="img" src="DSC_0297.jpg" alt="Sunrise over ocean with boats">
-	<img class="img1" src="DSC_0875.jpg" alt="Two seals in water">	
+	<img class="img" src="media/DSC_0875.jpg" width="600" height="500" alt="Two seals in water">	
 
-	<video width="320" height="240" autoplay>
-  	<source src="sunrise.mp4" type="video/mp4">
-  	<source src="sunrise.ogg" type="video/ogg">
-Your browser does not support the video tag.
-</video>
+	<audio id="myAudio">
+ 		<source src="media/pieropeluche_-_You_and_I_-_Kara_Square_and_Piero_Peluche.mp3" type="audio/mpeg" /> 
+ 		<p>
+ 			Your browser doesn't support HTML5 audio. Here is a 
+ 			<a href="media/pieropeluche_-_You_and_I_-_Kara_Square_and_Piero_Peluche.mp3">link to the audio</a> instead.
+ 		</p>
+ 	</audio>
+ 	
+ 	<div class="buttons">
+ 		<button onclick="playAudio()" type="button"><strong>Play</strong></button>
+ 		<button onclick="pauseAudio()" type="button"><strong>Pause</strong></button>
+ 	</div>
+
+ 	<script type="text/javascript"> 
+ 		var loveSong = document.getElementById("myAudio");
+ 		function playAudio() {
+ 			loveSong.play();
+ 		}
+
+ 		function pauseAudio() {
+ 			loveSong.pause();
+ 		}
+	</script>
+
+	<div class="attribution-block">
+		<p>
+			<small>
+				<a href="http://dig.ccmixter.org/files/pieropeluche/54312">You and I - Kara Square and Piero Peluche</a> by Piero Peluche (c) copyright 2016 <br>Licensed under a Creative Commons <a href="http://creativecommons.org/licenses/by-nc/3.0/"> Attribution Noncommercial  (3.0) </a> license. Ft: Kara Square
+			</small>
+		</p>
+	</div>
+	
+
 
 
 	<footer>										
