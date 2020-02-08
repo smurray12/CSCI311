@@ -1,0 +1,121 @@
+<!-- 
+* @Author: Sarah Murray
+* @Csci id: murraysa
+* @Purpose: Lab3Compute.html csci311
+* @Date:   2020-02-06 05:30:24
+* @Last Modified by:   Sarah
+* @Last Modified time: 2020-02-06 16:58:21
+--> 
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+  	 <link rel="stylesheet" type="text/css" href="../lab2/Lab2Styles.css">
+    <title>Lab 3 Compute</title>
+</head>
+
+<body>
+	<header>
+        <h1>Lab 3: Compute</h1>
+        <nav>
+        	<a href="index.html">Home</a>
+        	<a href="Lab3Form.html">Form</a>
+			    <a href="Lab3Dynamic.html">Dynamic</a>
+        </nav>
+  </header>
+
+   <div id="main_body">
+      <form>
+   		   <fieldset>
+            <legend>Calculator</legend>
+   			
+   			      <div class="inputRow">
+   			          <label class="myLabel">Number: </label>
+   			          <input class="myInput" type="number" id="num1" placeholder="Enter value here">
+                  <input class="myInput" type="button" value="Submit Value" onclick="submitNum()">
+                  
+      
+   		       </div>
+
+   		       <div class="inputRow">
+                  <label for="op">Select an operator:</label>
+                  <select id="op" name="operators">
+                      <option value=""> </option>
+                      <option value="+">+</option>
+                      <option value="-">-</option>
+                      <option value="/">/</option>
+                      <option value="%">%</option>
+                      <option value="^">^</option>
+   		           </select>
+            
+                  <input class="myInput" type="button" value="Submit Operator" onclick="submitOp()">
+            </div>
+
+
+   		      <div class="control">
+			         <input type="button" id="calc" value="Calculate" onclick="calculate()">
+			         <input type="button" id="reset" value="Reset">
+               <input type="button" id="display" value="Display" onclick="arrDisplay()">
+               <div id="result"> </div>
+		        </div>
+   	      </fieldset>
+    </form>
+   </div>
+   
+    <footer>
+        <small>Copyright &#169; 2020 Sarah Murray</small>
+    </footer>
+
+    <script>
+      var calc = [];
+     
+
+      function submitNum() {
+        var val1 = document.getElementById("num1").value;
+        var element = document.getElementById("num1");
+        if (val1 == "") {
+          element.style.borderColor = "red";
+          alert("Enter a number");
+        } else {
+            calc.push(val1);
+            var displayEl = document.getElementById("display").value;
+            var displayEl = displayEl + val1;
+            document.getElementById("num1").value = '';
+        }
+        for (var i = 0; i < calc.length; i++) {
+            document.getElementById("display").innerHTML = calc[i];
+        }
+      }
+
+      function submitOp() {
+        var op = document.getElementById("op").value;
+        var element = document.getElementById("op");
+        if (op == "") {
+          element.style.borderColor = "red";
+        } else {
+          calc.push(op);
+          var opEl = document.getElementById("display").value;
+          opEl = opEl + op;
+          document.getElementById("op").value = " ";
+        }
+      }
+
+      function arrDisplay() {
+          let e = "<hr/>"; 
+          for (var i = 0; i < calc.length; i++) {
+              e += calc[i] + " ";
+          }
+            document.getElementById("result").innerHTML = e;
+        
+      }
+
+    
+
+
+
+    </script>
+
+</body>
+</html>

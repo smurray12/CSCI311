@@ -1,0 +1,87 @@
+<!-- 
+* @Author: Sarah Murray
+* @Csci id: murraysa
+* @Purpose: Lab3Form.html csci311
+* @Date:   2020-02-06 05:30:24
+* @Last Modified by:   Sarah
+* @Last Modified time: 2020-02-06 16:58:21
+-->  
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+  	 <link rel="stylesheet" type="text/css" href="../lab2/Lab2Styles.css">
+    <title>Lab 3 Form</title>
+
+    <script>
+    	function checkNumber(min, max, id) {
+    		let value = document.getElementById(id).value;
+    		let element = document.getElementById(id);
+    		if (value < min || value > max) {
+    			element.style.border = "dashed red";
+    		} else {
+    			element.style.border = "thin solid black";
+    		}
+
+    	}
+
+    	function fixName() {
+    		let inputEl = document.getElementById("aName");
+    		let name = inputEl.value;
+	
+    		name = name.toLowerCase();
+    		name = name.replace(/[' ']/g, '');
+    		name = name.replace(/[\0-9]/g, '_');
+    		inputEl.value = name;
+    	}
+
+    </script>
+
+</head>
+
+<body>
+	<header>
+        <h1>Lab 3: Form</h1>
+        <nav>
+        	<a href="index.html">Home</a>
+        	<a href="Lab3Compute.html">Compute</a>
+			<a href="Lab3Dynamic.html">Dynamic</a>
+        </nav>
+   </header>
+
+   <div id="main_body">
+	   <form action="../lab2/Lab2ProcessForm.php" method="post">
+			<div class="inputRow">
+				<label class="myLabel" for="numberA"> Number A: </label>
+				<input class="myInput" type="number" name="numberA" id="numberA" tabindex="2" onchange="checkNumber(50,400,'numberA')" required>
+			</div>
+			
+			<div class="inputRow">
+				<label class="myLabel" for="numberB"> Number B: </label>
+				<input class="myInput" type="number" name="numberB" id="numberB" tabindex="3" onchange="checkNumber(1,350,'numberB')" required>
+			</div>
+			
+			<div class="inputRow">
+				<label class="myLabel" for="aName"> Your Name: </label>
+				<input class="myInput" type="text" name="aName" id="aName" tabindex=1 onblur="fixName()">
+			</div>	
+			
+			<div class="inputRow">
+				<label class="myLabel" for="colour"> A Colour </label>		
+				<input class="myInput" type="color" name="colour" id="colour" tabindex="4">
+			</div>
+			
+			<div class="inputRow">
+				<input type="submit" value="Create">
+			</div>
+		</form>	
+   </div>
+   
+    <footer>
+        <small>Copyright &#169; 2020 Sarah Murray</small>
+    </footer>
+
+</body>
+</html>
