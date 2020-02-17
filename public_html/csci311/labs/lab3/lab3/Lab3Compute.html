@@ -4,7 +4,7 @@
 * @Purpose: Lab3Compute.html csci311
 * @Date:   2020-02-06 05:30:24
 * @Last Modified by:   Sarah
-* @Last Modified time: 2020-02-06 16:58:21
+* @Last Modified time: 2020-02-16 13:46:21
 --> 
 
 <!DOCTYPE html>
@@ -33,10 +33,8 @@
    			
    			      <div class="inputRow">
    			          <label class="myLabel">Number: </label>
-   			          <input class="myInput" type="number" id="num1" placeholder="Enter value here">
+   			          <input class="myInput" type="number" id="num1" placeholder="Enter value here" required  oninput="check()">
                   <input class="myInput" type="button" value="Submit Value" onclick="submitNum()">
-                  
-      
    		       </div>
 
    		       <div class="inputRow">
@@ -56,25 +54,39 @@
 
    		      <div class="control">
 			         <input type="button" id="calc" value="Calculate" onclick="calculate()">
-			         <input type="button" id="reset" value="Reset">
+			         <input type="button" id="reset" value="Reset" onclick="resetCalc()">
                <input type="button" id="display" value="Display" onclick="arrDisplay()">
                <div id="result"> </div>
+               <div id="result1"> </div>
 		        </div>
    	      </fieldset>
     </form>
    </div>
-   
+
     <footer>
         <small>Copyright &#169; 2020 Sarah Murray</small>
     </footer>
 
     <script>
       var calc = [];
-     
+
+      function resetCalc() {
+        calc = [];
+        var numEl = document.getElementById("num1");
+        var opEl = document.getElementById("op");
+        numEl.value = "";
+        numEl.disabled = false;
+        opEl.disabled = false;
+        opEl.value = " ";
+        numEl.style.borderColor = "";
+        opEl.style.borderColor = "";
+      }
 
       function submitNum() {
         var val1 = document.getElementById("num1").value;
         var element = document.getElementById("num1");
+        var op = document.getElementById("op").value;
+      
         if (val1 == "") {
           element.style.borderColor = "red";
           alert("Enter a number");
@@ -83,10 +95,30 @@
             var displayEl = document.getElementById("display").value;
             var displayEl = displayEl + val1;
             document.getElementById("num1").value = '';
+            document.getElementById("num1").disabled = true;
+            document.getElementById("op").disabled = false;
+            element.style.borderColor = "";
         }
+
         for (var i = 0; i < calc.length; i++) {
             document.getElementById("display").innerHTML = calc[i];
         }
+      }
+
+      function check() {
+        var val1 = document.getElementById("num1").value;
+        var element = document.getElementById("num1");
+        if (val1 == 0 && calc[1]=="/") {
+          alert("Cannot divide by zero");
+          element.style.borderColor = "red";
+          resetCalc();
+        } 
+
+        if (val1 == 0 && calc[1]=="^") {
+            alert("Cannot raise 0 to a power");
+            element.style.borderColor = "red";
+            resetCalc();
+        } 
       }
 
       function submitOp() {
@@ -99,6 +131,9 @@
           var opEl = document.getElementById("display").value;
           opEl = opEl + op;
           document.getElementById("op").value = " ";
+          document.getElementById("op").disabled = true;
+          document.getElementById("num1").disabled = false;
+          element.style.borderColor = "";
         }
       }
 
@@ -108,13 +143,42 @@
               e += calc[i] + " ";
           }
             document.getElementById("result").innerHTML = e;
-        
       }
 
-    
+      function calculate() {
+        let arrSize = 3;
+        if (calc.length != arrSize) {
+          alert("Must enter 2 numbers & 1 operator");
+        } else {
+          var num1 = calc.shift();
+          var op = calc.shift();
+          var num2 = calc.shift();
 
-
-
+          switch(op) {
+            case '+':
+              var result = Number(num1) + Number(num2);
+              document.getElementById("result1").innerHTML = result;
+              break;
+            case '-':
+              var result = Number(num1) - Number(num2);
+              document.getElementById("result1").innerHTML = result;
+              break;
+            case '/':
+              var result = Number(num1) / Number(num2);
+              document.getElementById("result1").innerHTML = result;
+              break;
+              
+            case '%':
+              var result = Number(num1) % Number(num2);
+              document.getElementById("result1").innerHTML = result;
+              break;
+            case '^':
+              var result = Math.pow(Number(num1), Number(num2));
+              document.getElementById("result1").innerHTML = result;
+              break;
+          }
+        }
+      }
     </script>
 
 </body>

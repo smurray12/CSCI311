@@ -1,0 +1,52 @@
+<!-- 
+* @Author: Sarah Murray
+* @Csci id: murraysa
+* @Purpose: Lab3Dynamic.html csci311
+* @Date:   2020-02-06 05:30:24
+* @Last Modified by:   Sarah
+* @Last Modified time: 2020-02-16 13:46:21
+--> 
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Lab 3: Dynamic</title>
+  	<link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="Lab3Dynamic.js"> </script>
+</head>
+
+<body onload="promptName()">
+	<header>
+		<h1 id="userPrompt">Lab 3: Dynamic</h1>
+	</header>
+
+	<div id="main_body">
+		<div class="topnav">
+			<a href="./Lab3Form.html">Form</a>
+			<a href="./Lab3Compute.html">Compute</a>
+			<a class="active" href="./Lab3Dynamic.html">Dynamic</a>
+		</div>	
+	
+		<div class="noBorder">	
+			<div class="image">	
+				<img src="Dog.jpg" alt="a dog in the grass">	
+			</div>	
+	
+			<div id="animals">	
+				<ul>	
+					<li id="dog">dog</li>	
+				</ul>	
+			</div>	
+	
+			<input type="button" value="Click Me!" onclick="changeAnimal()">
+		</div>
+	</div>
+
+	<footer>
+		<small>Copyright &#169; 2020 Sarah Murray</small>
+	</footer>
+
+
+</body>
