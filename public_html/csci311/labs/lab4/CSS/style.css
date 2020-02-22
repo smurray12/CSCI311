@@ -1,0 +1,64 @@
+/*
+* @Author: Sarah Murray
+* @Csci id: murraysa
+* @Purpose: css for index.html, Lab4Album.html, Lab4Blog.html
+* @Date:   2020-02-21 17:09:27
+* @Last Modified by:   sarah
+* @Last Modified time: 2020-02-22 13:41:26
+*/
+
+.jumbotron {
+	background-attachment: fixed;
+ 	background-position: center;
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+ 	margin-bottom: 0;
+}
+
+#header {
+	width: 100%;
+	height: 120px;
+}
+
+#blog-image {
+	position: center;
+}
+
+.mastNav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+
+.mastNav > li > a:hover,
+.mastNav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(253, 150, 68,1.0);
+}
+.mastNav > .active > a,
+.mastNav > .active > a:hover,
+.mastNav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: rgba(253, 150, 68,1.0);
+}
+
+.mastNav > li {
+  display: inline-block;
+}
+.mastNav > li + li {
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+
