@@ -1,14 +1,15 @@
 <?php
-/**
+/*
  * @Author: Sarah Murray
  * @Csci id: murraysa
  * @Date:   2020-03-03 16:23:46
  * @Last Modified by:   sarah
- * @Last Modified time: 2020-03-04 17:31:39
+ * @Last Modified time: 2020-03-07 17:38:29
  */
 	require('dbinfo.inc');
 	require('front.php');
 	$title = "Select Auto";
+	$page = "Select";
 	require('nav.php');
 
 ?>
@@ -49,8 +50,8 @@
 		print "Error!" . $e->getMessage()."<br/>";
 	}
 ?>
-	</tbody>
-	</table>
+		</tbody>
+		</table>
 
 <?php
 	require('back.php');

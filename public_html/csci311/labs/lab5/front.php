@@ -3,7 +3,7 @@
  * @Csci id: murraysa
  * @Date:   2020-03-03 16:23:46
  * @Last Modified by:   sarah
- * @Last Modified time: 2020-03-04 20:27:58
+ * @Last Modified time: 2020-03-07 17:36:25
  !-->
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="CSS/style.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<title> <?php echo $user; ?> </title>
+	<title> <?php echo $page; ?> </title>
 </head>
 
 <body>
